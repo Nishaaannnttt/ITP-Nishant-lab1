@@ -8,7 +8,7 @@ disc2=0.1
 
 #taking inputs from user 
 name=input("enter the patient's name :  ")
-cleaning=input("was cleaning performed ?(y/n) ")
+cleaning=input("was cleaning performed ? (y/n) ")
 cavity=input("was cavity filling done ? (y/n)")
 xray=input("was xray done? (y/n) ")
 
@@ -36,5 +36,22 @@ def calculate(name,cleaning,cavity,xray):
     tax=total*tax_rate
     print("your taxe amt is :",tax)
     total=tax+total
+    
+    #giving discount 
+    if(total>200):
+        discount1=total*disc1
+        total=total-discount1
+        print("your recieved 5 percent discount")
+    elif(total>300):
+        discount2=total*disc2
+        total=total-discount2
+        print("you received 10 per discount")
+    else:
+        print("no discount was received ")
+    print("your total bill is :",total)
+    
+calculate(name,cleaning,xray,cavity)
+        
+        
     
         
