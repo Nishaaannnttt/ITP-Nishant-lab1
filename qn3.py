@@ -19,3 +19,13 @@ def calculation():
     total_dollars=total_cents/PENNIES_IN_DOLLAR
     print("your total dollar is :",total_dollars)
     
+    if(total_dollars>1):
+        print("sorry the amt you entered is more than one dollar")
+    elif(total_dollars<1):
+        print("sorry the amount you entered is less than one dollar")
+    else:
+        print('''Congratulations!
+            The amount you entered was exactly one dollar
+            You win the game !!!''')
+calculation()
+    
