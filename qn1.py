@@ -14,7 +14,27 @@ xray=input("was xray done? (y/n) ")
 
 #defining the functions
 def calculate(name,cleaning,cavity,xray):
+    print("receipt for patients name is :",name)
+    total=0
     if (cleaning=='y'):
         total=total+cleaning_rate
         print("you have done the cleaning")
+    else:
+        print("cleaning was not done ")
+    if (cavity=='y'):
+        total=total+cavity_filling
+        print("cavity filling was done ")
+    else:
+        print("cavity filling was not done ")
+    if(xray=='y'):
+        total=total+x_ray
+        print("x ray was done")
+    else:
+        print("x ray was not done ")
+        
+    #adding taxes
+    tax=total*tax_rate
+    print("your taxe amt is :",tax)
+    total=tax+total
     
+        
